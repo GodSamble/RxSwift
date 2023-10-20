@@ -12,9 +12,9 @@ import RxCocoa
 
 class GeolocationService {
     
-    static let instance = GeolocationService()
-    private (set) var authorized: Driver<Bool>
-    private (set) var location: Driver<CLLocationCoordinate2D>
+    static let instance = GeolocationService() // sattic, private init() 싱글톤 정석대로 작성
+    private (set) var authorized: Driver<Bool> // 드라이버 구독
+    private (set) var location: Driver<CLLocationCoordinate2D> // 드라이버 구독
     
     private let locationManager = CLLocationManager()
     

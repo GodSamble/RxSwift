@@ -31,7 +31,7 @@ class GeolocationViewController: ViewController {
         
         view.addSubview(noGeolocationView)
         
-        let geolocationService = GeolocationService.instance
+        let geolocationService = GeolocationService.instance // 싱글톤객체를 인스턴스로 가져옴
         
         geolocationService.authorized
             .drive(noGeolocationView.rx.isHidden)
